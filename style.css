@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    background: rgb(241, 167, 241);
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstHeadings {
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.firstHeadings1{
+    font-size: 45px;
+    margin-left: 180px;
+}
+.firstHeadings2{
+    font-size: 40px;
+    color: black;
+}
+.addList{
+    float: right;
+    margin-right: 200px;
+ 
+}
+#textchanged{
+    font-size: 35px;
+    margin-left: 180px;
+}
+#parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.task{
+    background-color:white;
+    width: 268px;
+    height: 350px;
+    border: 2px solid rgb(238, 52, 19);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+  margin: 30px;
+    padding-top: 20px;
+    text-align: center;
+    transition: transform .2s;
+   
+    
+}
+
+.task_body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* width: 100%; */
+    /* height: 100%; */
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    /* position: absolute; */
+}
+.task_title{
+    /* padding: 20px 10px 20px 10px; */
+    /* font-weight: 300; */
+    /* margin: 20px 0px 0px 0px; */
+    margin: 0%;
+    font-size: 26px;
+}
+.material-icons{
+    color: tomato;
+    padding:0px 10px 0px 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.addText{
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 100px;
+    color: black;
+}
+.overview {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+hr{
+    width: 100%;
+    margin-right:0px;
+}
+
+.addNewList {
+    display: none;
+}
+.addNewListActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    text-align: center;
+    width: 35vw;
+    height: 35vh;
+    z-index: 1;
+    position:absolute;
+    top: 30vh;
+    left: 35vw;
+    background-color:white;
+    box-sizing: border-box;
+    padding: 1%;
+    color: tomato;
+    font-weight:lighter;
+     animation:name 0.2s linear 1;
+
+}
+@keyframes name {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+.addNewItemActive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    text-align: center;
+    width: 35vw;
+    height: 35vh;
+    z-index: 1;
+    position:absolute;
+    top: 30vh;
+    left: 35vw;
+    background-color:white;
+    box-sizing: border-box;
+    padding: 1%;
+    color: tomato;
+    font-weight:lighter;
+    transition: transform .2s;
+}
+
+#itemBtn{
+    width: 100px;
+    height: 50px;
+    padding: 0%;
+}
+
+#anotherItemBtn {
+    width: 100px;
+    height: 50px;
+    padding: 0%;
+}
+
+.AddNewListTitle {
+    font-size: 36px;
+    font-weight: 100px;
+}
+.inputText{
+    width: 60%;
+    height:20%;
+    box-shadow: 1px 1px 4px gray;
+    border: 1px solid tomato;
+    border-radius:5px;
+    font-size: 20px;
+    position: relative;
+
+}
+
+.newButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 10vh;
+
+}
+
+    .pendingIcon {
+        width: 90px;
+        height: 30px;
+        border-radius: 20px;
+        padding-top: 4px;
+        background-color: #9f9ff5;
+        border: 2px solid red;
+}
+.btn{
+    color: white;
+    background-color: tomato;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    margin: 2%;
+    padding: 2%;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn-taskBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    position: relative;
+
+}
+
+.btn:active {
+    transform: scale(0.9);
+
+}
+.btn-ListBody{
+    position: relative;
+}
+.removeTask {
+    position: absolute;
+    top: 210px;
+    left: 170px;
+}
+
+.listBtn{
+    width: 100px;
+    height: 50px;
+    padding: 2%;
+    margin: 2%;
+}
+.addTask {
+    position: absolute;
+    top: 210px;
+    right: 0px;
+}
+
+
+.pTask {
+    display: flex;
+ justify-content: center;
+    
+}
+
+.scratch {
+    font-size: 25px;
+    margin: 0;
+}
+
+.me{
+    color: red;
+    text-decoration-line: line-through;
+}
+.inactive {
+    display: none;
+}
+.page2Contains {
+    display: none;
+}
+
+.page2Contains.active {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
